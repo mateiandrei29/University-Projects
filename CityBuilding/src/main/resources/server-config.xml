@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="PlaceRepository" class="repository.PlaceRepository"/>
+    <bean id="DistrictRepository" class="repository.DistrictRepository"/>
+    <bean id="AmenityRepository" class="repository.AmenityRepository"/>
+    <bean id="LandHydroRepository" class="repository.LandHydroRepository"/>
+    <bean id="BugRepository" class="repository.BugRepository"/>
+    <bean id="Validator" class="validator.PlaceValidator"/>
+    <bean id="Service" class="service.Service">
+        <constructor-arg index="0" ref="LandHydroRepository"/>
+        <constructor-arg index="1" ref="PlaceRepository"/>
+        <constructor-arg index="2" ref="AmenityRepository"/>
+        <constructor-arg index="3" ref="DistrictRepository"/>
+        <constructor-arg index="4" ref="BugRepository"/>
+        <constructor-arg index="5" ref="Validator"/>
+    </bean>
+    <bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+        <property name="serviceName" value="citybuilder"/>
+        <property name="service" ref="Service"/>
+        <property name="serviceInterface" value="services.Services"/>
+        <property name="servicePort" value="1099"/>
+    </bean>
+</beans>

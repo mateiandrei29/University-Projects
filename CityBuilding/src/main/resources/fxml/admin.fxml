@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminController">
+    <children>
+        <SplitPane dividerPositions="0.7726" layoutX="-2.0" layoutY="-3.0" prefHeight="726.0" prefWidth="1032.0">
+            <items>
+                <AnchorPane fx:id="pane1" minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="417.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="445.0" prefWidth="254.0">
+                    <children>
+                        <Button fx:id="addRule" layoutX="97.0" layoutY="394.0" mnemonicParsing="false" text="Add" />
+                        <TextField fx:id="rule" layoutX="40.0" layoutY="336.0" />
+                        <Text layoutX="80.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add new rule" />
+                        <Button fx:id="seeBugs" layoutX="76.0" layoutY="218.0" mnemonicParsing="false" text="See all bugs" />
+                  <ListView layoutX="14.0" layoutY="446.0" prefHeight="200.0" prefWidth="200.0" />
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

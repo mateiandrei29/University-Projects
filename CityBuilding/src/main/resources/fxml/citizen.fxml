@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CitizenController">
+    <children>
+        <SplitPane dividerPositions="0.7726" layoutX="-2.0" layoutY="-3.0" prefHeight="726.0" prefWidth="1032.0">
+            <items>
+                <AnchorPane fx:id="pane1" minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="417.0" />
+                <AnchorPane fx:id="pane2" minHeight="0.0" minWidth="0.0" prefHeight="445.0" prefWidth="254.0">
+                    <children>
+                        <Text layoutX="14.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Place Name" />
+                        <TextField fx:id="textPlaceName" editable="false" layoutX="48.0" layoutY="132.0" />
+                        <Text layoutX="14.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rating" />
+                        <TextField fx:id="textRating" editable="false" layoutX="48.0" layoutY="196.0" />
+                        <Text layoutX="9.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Capacity" />
+                        <TextField fx:id="textCapacity" editable="false" layoutX="48.0" layoutY="260.0" />
+                        <Text layoutX="11.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Availability" />
+                        <TextField fx:id="textAvailability" editable="false" layoutX="48.0" layoutY="312.0" />
+                        <Text layoutX="10.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" />
+                        <TextField fx:id="textAddress" editable="false" layoutX="48.0" layoutY="376.0" />
+                        <Text layoutX="6.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone no" />
+                        <TextField fx:id="textPhoneNo" editable="false" layoutX="48.0" layoutY="426.0" />
+                        <Text layoutX="10.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Website" />
+                        <TextField fx:id="textWebsite" editable="false" layoutX="48.0" layoutY="488.0" />
+                        <Text layoutX="17.0" layoutY="534.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+                        <TextField fx:id="textEmail" editable="f    alse" layoutX="48.0" layoutY="538.0" />
+                  <Button fx:id="buttonBug" layoutX="25.0" layoutY="685.0" mnemonicParsing="false" text="Report a bug" />
+                  <TextArea fx:id="bugDescription" layoutX="16.0" layoutY="464.0" prefHeight="200.0" prefWidth="200.0" promptText="Bug description here" />
+                  <Button fx:id="buttonSend" layoutX="122.0" layoutY="685.0" mnemonicParsing="false" text="Send bug" />
+                  <TextField fx:id="search" layoutX="48.0" layoutY="70.0" promptText="Search places" />
+                  <TextField fx:id="weather" layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="45.0" />
+                    </children></AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
